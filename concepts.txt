@@ -1,0 +1,117 @@
+[
+  React is a JS library for building  user interfaces.
+
+  Websites/UIs are looked at in terms of components.
+]
+
+components:
+[
+  Reusable piece of code that can be used to build elements on the page.
+
+  Allows us to break down complex UIs, which makes them easier to maintain and scale.
+
+  components can get props passed in and can hold their own state.
+]
+
+state:
+[
+  state represents the data that a component manages internally.
+
+  this could be form input data, fetched data, UI-related data like if a modal is open/close.
+
+  there is also global state, which relates to the app as a whole and not a single component.
+
+  to define a state in a functional component, you can use a hook(useState hook).
+]
+
+useState:
+[
+  returns an array:
+  [currentStateValue, functionToSetCurrentStateValue]
+]
+
+functional components don't have lifecycle methods coz they are not a class. So hooks allow us to do the same stuff
+that we could do using class components such as set state... in functional component.
+
+Hooks:
+[
+  Allows us to use state and other React features within functional components.
+  [
+    useState,
+    useEffect,
+    useRef,
+    useReducer
+  ]
+]
+
+This hooks will be phased out in React19
+[
+  useCallback,
+  useMemo,
+  useContext
+]
+
+Output of component is JSX(JavaScript Syntax Extension):
+[
+  An HTML-like syntax within JavaScript(components).
+]
+
+Different Types of Websites/Applications can be built using React:
+[
+  1. Single Page App(SPA): Load a single HTML file and JavaScript(bundle of JS files) loads the entire UI including Routes.
+  
+  2. Server-Side Rendered(SSR): Server sends fully rendered page to client. You can fetch data and load it as well.
+
+  3. Static Site Generation(SSG): React generates static HTML files at build time. These are very fast.
+]
+
+Vite(veet):
+[
+  Vite is a super fast front-end toolkit that can be used for all kinds of JS projects including React.
+
+  It is built on top of ESBuild, which is very fast JS bundler.
+
+  Fast development server with hot-reload.
+
+  great solution for building SPAs.
+
+  installed with "npm create vite@latest".
+]
+
+index.html:
+[
+  single page application
+]
+
+entry point:
+[
+  main.jsx
+]
+
+StrictMode:
+[
+  it is a wrapper component that will check for potential problems in your app like unsafe lifecycle methods.
+]
+
+we will use tailwind, so lets delete unwanted css files(App.css, index.css(only clearing this)).
+
+getting tailwind:
+[
+  npm install -D tailwindcss postcss autoprefixer
+
+  initialize tailwind with -p
+  [
+    npx tailwindcss init -p
+    [
+      this will create a tailwind config file and -p will create a postcss config file
+    ]
+    
+  ]
+
+  add this in index.css
+  [
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+  ]
+]
