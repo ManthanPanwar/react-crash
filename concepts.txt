@@ -115,3 +115,29 @@ getting tailwind:
     @tailwind utilities;
   ]
 ]
+
+*********VERY IMPORTANT NOTE*********
+[
+  if you one element and one comment in return() of jsx, it won't work coz it consider comment also as element.
+  so you need to wrap them in one parent element.
+]
+
+
+for icons we need to install React icons package:
+[
+  npm install react-icons:
+  [
+    used using 'i' tags.
+  ]
+  font awesome (fa)
+]
+
+we need to install react router for routing:
+[ 
+  it is a package
+  [
+    npm install react-router-dom
+  ]
+]
+
+we will put all the routing stuff in the App.jsx
