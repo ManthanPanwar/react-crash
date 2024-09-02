@@ -141,3 +141,40 @@ we need to install react router for routing:
 ]
 
 we will put all the routing stuff in the App.jsx
+
+how to use layout:
+[
+  bring the MainLayout in the App.jsx
+
+  create a parent route to the rest of our routes
+]
+
+In the main layout whatever route you are on that content/page is gonna come through the Outlet.
+
+If I want to show any component on every page then add it in the MainLayout.
+
+page refresh:
+[
+  the 'a' tag refreshes the page but we dont want to refresh
+  [
+    we will use link tag given by react-router-dom
+
+    a --------changes-----> Link
+    href ---------changes----> to
+  ]
+]
+
+we will use NavLink for showing which link is currently opened(by making it bg=black):
+[
+  it works similar to Link but in NavLink it adds class to it
+]
+
+to fetch data from backend we will use:
+[
+  npm install json-server --save-dev
+
+  json-server
+  [
+    lets you create mock API
+  ]
+]

@@ -5,31 +5,24 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
-// import Navbar from "./components/Navbar";
-// import Hero from "./components/Hero";
-// import HomeCards from "./components/Homecards";
-// import JobListings from "./components/JobListings";
-// import ViewAllJobs from "./components/ViewAllJobs";
+import MainLayout from "./layouts/MainLayout";
+import HomePage from "./pages/HomePage";
+import JobsPage from "./pages/JobsPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/add" element={<h1>My App</h1>} />)
+  createRoutesFromElements(
+    <Route path="/" element={<MainLayout />}>
+      {/* any routes we put inside here are gonna use MainLayout */}
+      <Route index element={<HomePage />} />
+      <Route path="/jobs" element={<JobsPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Route>
+  )
 );
 
 const App = () => {
-  return (
-    // this all components will be used using router
-    // <>
-    //   <Navbar />
-
-    //   {/* passing props */}
-    //   {/* <Hero title="Test Title" subtitle="this is subtitle" /> */}
-    //   <Hero />
-    //   <HomeCards />
-    //   <JobListings />
-    //   <ViewAllJobs />
-    // </>
-    <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
