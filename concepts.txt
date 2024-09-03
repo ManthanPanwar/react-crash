@@ -178,3 +178,26 @@ to fetch data from backend we will use:
     lets you create mock API
   ]
 ]
+
+to get spinners:
+[
+  npm install react-spinners
+]
+
+setting up the proxy:
+[
+  proxy: {
+      "/api": {
+        target: "http://localhost:5000",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+]
+
+how to get the id in api call:
+[
+  we will use:
+  [
+    useParams hook from react-router-dom
+  ]
+]
