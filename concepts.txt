@@ -201,3 +201,19 @@ how to get the id in api call:
     useParams hook from react-router-dom
   ]
 ]
+
+we need to use {} to import components or functions that are not default.
+
+The common way to deal with the html form in jsx is to assign separate states to all the fields.
+
+
+useNavigate:
+[
+  this hook is used to navigate to a url
+]
+
+********Calling a function in parent Component******
+<Route path="/add-job" element={<AddJobPage addJobSubmit={addJob} />} />
+[
+  addJobSubmit={addJob} --------> this is how you do it
+]
